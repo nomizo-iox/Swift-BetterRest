@@ -13,6 +13,7 @@
 		28EF2E8723AED33A006D4633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28EF2E8623AED33A006D4633 /* Assets.xcassets */; };
 		28EF2E8A23AED33A006D4633 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28EF2E8923AED33A006D4633 /* Preview Assets.xcassets */; };
 		28EF2E8D23AED33A006D4633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EF2E8B23AED33A006D4633 /* LaunchScreen.storyboard */; };
+		28EF2E9523AFA84A006D4633 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 28EF2E9423AFA849006D4633 /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		28EF2E8923AED33A006D4633 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		28EF2E8C23AED33A006D4633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28EF2E8E23AED33A006D4633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28EF2E9423AFA849006D4633 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				28EF2E8623AED33A006D4633 /* Assets.xcassets */,
 				28EF2E8B23AED33A006D4633 /* LaunchScreen.storyboard */,
 				28EF2E8E23AED33A006D4633 /* Info.plist */,
+				28EF2E9423AFA849006D4633 /* SleepCalculator.mlmodel */,
 				28EF2E8823AED33A006D4633 /* Preview Content */,
 			);
 			path = BetterRest;
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28EF2E8123AED338006D4633 /* AppDelegate.swift in Sources */,
+				28EF2E9523AFA84A006D4633 /* SleepCalculator.mlmodel in Sources */,
 				28EF2E8323AED338006D4633 /* SceneDelegate.swift in Sources */,
 				28EF2E8523AED338006D4633 /* ContentView.swift in Sources */,
 			);
