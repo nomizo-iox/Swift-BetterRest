@@ -33,10 +33,7 @@ struct ContentView: View {
             Form {
                 
                 // 1: Date Selector
-                VStack (alignment: .leading, spacing: 0) {
-                    Text("When do you wan to wake up?")
-                        .font(.headline)
-                    
+                Section (header: Text("When do you wan to wake up?")) {
                     DatePicker("Please ebter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                         .labelsHidden()
                         .datePickerStyle(WheelDatePickerStyle())
@@ -44,31 +41,33 @@ struct ContentView: View {
                 
                 
                 // 2: Sleep Selector
-                VStack (alignment: .leading, spacing: 0) {
-                    Text("Desired amount of sleep")
-                        .font(.headline)
-                    
+                Section (header: Text("Desired Amount of Sleep?")) {
                     Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
                         Text("\(sleepAmount, specifier: "%g") hours")
                     }
                     
                 }
                 
-                // 3: Coffee Selector
-                VStack (alignment: .leading, spacing: 0) {
-                    Text("Daily coffee intake")
-                        .font(.headline)
-                    
-                    Stepper(value: $coffeeAmount, in: 1...20) {
-                        if coffeeAmount == 1 {
-                            Text("1 cup")
-                        } else {
-                            Text("\(coffeeAmount) cups")
+                // 3: Coffee Selector - Stepper
+//                Section (header: Text("Daily Coffee Intake?")) {
+//                    Stepper(value: $coffeeAmount, in: 1...20) {
+//                        if coffeeAmount == 1 {
+//                            Text("1 cup")
+//                        } else {
+//                            Text("\(coffeeAmount) cups")
+//                        }
+//                    }
+//                }
+                
+                  // 3: Coffee Selector - Picker
+                Section (header: Text("Daily Coffee Intake?")) {
+                    Picker("Number of Coffes", selection: $coffeeAmount) {
+                        ForEach (1..<11) {
+                            Text("\($0) Coffee(s)")
                         }
                     }
                 }
             }
-                
             .navigationBarTitle("BetterRest")
             .navigationBarItems(trailing: Button(action: calculateBetime) {
                 Text("Calculate")
